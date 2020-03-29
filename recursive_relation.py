@@ -1,14 +1,14 @@
 
 
-def reproduction_recursive(n, k):
-    if n == 0:
+def reproduction_recursive(month: int, initate_sequence: int) -> int:
+    if month == 0:
         return 0
-    elif n == 1:
+    elif month == 1:
         return 1
 
-    return reproduction_recursive(n - 1, k) + k * reproduction_recursive(n - 2, k)
+    return reproduction_recursive(month - 1, initate_sequence) + initate_sequence * reproduction_recursive(month - 2, initate_sequence)
 
 
 if __name__ == "__main__":
-    print(reproduction_recursive(34, 2))
+    print(reproduction_recursive(3, 2))
 
